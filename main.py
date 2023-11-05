@@ -2,10 +2,6 @@ import requests
 import datetime
 
 
-metamask_address = '0xeD873463fb62E2B47BE045beA7385d35166A56dE'
-etherscan_api_key = '3SVXH4QK42N8XZN5BY6BDM9687TN1GMA9K'
-
-
 def unix_time():
     current_time = datetime.datetime.now()
     timestamp = datetime.datetime.timestamp(current_time)
@@ -40,6 +36,8 @@ def get_total_gas_used():
     pass
 
 
+address = input('Ethereum Address: ')
+etherscan_api_key = '3SVXH4QK42N8XZN5BY6BDM9687TN1GMA9K'
 print(f'Balance: {get_balance(metamask_address, etherscan_api_key)} eth')
 print(get_current_block(etherscan_api_key))
 
